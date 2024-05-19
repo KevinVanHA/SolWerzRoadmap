@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const planets = [
-        { name: 'Tatooine', info: 'A desert planet with two suns.', x: 50, y: 70, image: '/SolWerzRoadmap/images/Tatooine.png' },
-        { name: 'Rodia', info: 'The capital of the Galactic Republic.', x: 80, y: 30, image: '/SolWerzRoadmap/images/rodia.png' },
-        { name: 'Naboo', info: 'An icy planet and the site of a Rebel Alliance base.', x: 20, y: 40, image: '/SolWerzRoadmap/images/naboo.png' },
-        { name: 'Mustafar', info: 'An icy planet and the site of a Rebel Alliance base.', x: 10, y: 50, image: '/SolWerzRoadmap/images/mustafar.png' }
+        { name: 'Tatooine', info: 'A desert planet with two suns.', x: 50, y: 70, image: '/images/Tatooine.png' },
+        { name: 'Rodia', info: 'The capital of the Galactic Republic.', x: 80, y: 30, image: '/images/rodia.png' },
+        { name: 'Naboo', info: 'An icy planet and the site of a Rebel Alliance base.', x: 20, y: 40, image: '/images/naboo.png' },
+        { name: 'Mustafar', info: 'An icy planet and the site of a Rebel Alliance base.', x: 10, y: 50, image: '/images/mustafar.png' }
 
         // Add more planets as needed
     ];
