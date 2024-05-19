@@ -18,8 +18,8 @@ body, html {
 
 #map {
     position: relative;
-    width: 65vw;
-    height: 70vh;
+    width: 85vw;
+    height: 80vh;
     background-image: url('images/StarMap.png'); /* Ensure this path is correct */
     background-size: cover;
     background-position: center;
@@ -32,6 +32,14 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+    animation: wiggle 10s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -48%) rotate(1deg); }
+    50% { transform: translate(-50%, -52%) rotate(-1deg); }
+    75% { transform: translate(-50%, -50%) rotate(1deg); }
 }
 
 .planet {
@@ -48,47 +56,23 @@ body, html {
     transform: scale(1.1); /* Only scale up the planet without moving it */
 }
 
-.planet-text {
-        font-size: 14px;
-    font-family: 'Star Jedi', Arial, sans-serif; /* Custom font */
-    position: relative;
-    margin-top: 5px; /* Move text above the planet */
-}
-
-.planet-container:hover .planet-text {
-    display: block;
-}
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup.hidden {
+.info-box {
     display: none;
-}
-
-.popup-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.popup-content .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
+    width: 120px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-family: 'Star Jedi', Arial, sans-serif; /* Custom font */
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -150%); /* Position the box above the planet */
+}
+
+.planet-container:hover .info-box {
+    display: block;
 }
 
 /* Media query for smaller screens */
@@ -96,5 +80,9 @@ body, html {
     .planet {
         width: 20px;
         height: 20px;
+    }
+    .info-box {
+        width: 100px;
+        font-size: 10px;
     }
 }
