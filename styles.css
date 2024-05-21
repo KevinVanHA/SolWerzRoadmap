@@ -38,6 +38,7 @@ body, html {
     background-size: cover;
     background-position: center;
     z-index: 1;
+    will-change: transform;
 }
 
 #map {
@@ -46,6 +47,7 @@ body, html {
     height: 100%;
     transform-origin: center center;
     z-index: 2;
+    will-change: transform;
 }
 
 .planet-container {
@@ -80,7 +82,7 @@ body, html {
 .info-box {
     display: none;
     position: absolute;
-    width: 120px;
+    width: 200px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     border: 1px solid #fff;
